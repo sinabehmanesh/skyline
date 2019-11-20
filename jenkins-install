@@ -50,9 +50,6 @@ else
         exit 1
 fi
 
-
-echo "Java version ..."
-
 java -version
 
 #installing jenkins
@@ -66,12 +63,13 @@ else
 fi
 
 
-#ufw port checking!
+#ufw port checking! (on ubuntu 19.04)
 sudo ufw allow 8080
 
 #initial password
 echo "installation compelete"
 echo "initial admin password is:"
+
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 #source: digital ocean
